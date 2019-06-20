@@ -58,11 +58,47 @@ body{
 	margin-left:15px;
 	margin-right:15px;
 	margin-bottom: 30px;
+	position: relative;
 }
 
 .transparent-box{
 	background:#ffffffaa;
 	min-height:200px;
 	padding:15px;
+	box-shadow: 0 9px 22px rgba(189, 28, 95, 0.19);
+}
+
+.glowing-circle{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	background:#f44336;
+	/*border:5px solid #ff938b;*/
+	box-shadow: 0 0 20px #ff938b;
+	animation: glow 2s infinite;
+	position: absolute;
+	top:-15px;
+	right:-15px;
+}
+@keyframes glow {
+	0% {
+		/*border-color:#ff938b;*/
+		box-shadow: 0 0 20px #ff938b;
+	}
+	50% {
+		/*border-color:#ffdedc;*/
+		box-shadow: 0 0 0px #ff938b;
+	}
+	100% {
+		/*border-color:#ff938b;*/
+		box-shadow: 0 0 20px #ff938b;
+	}
+}
+
+.box{
+	max-width: 400px;
+	padding:30px;
+	background: #fff;
 	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	margin:0 auto;
 }
